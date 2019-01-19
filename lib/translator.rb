@@ -1,7 +1,6 @@
-# require modules here
+require 'yaml'
 
 def load_library(arg)
-  require 'yaml' # get_meaning is japanese: meaning
   original = YAML.load_file(arg) #get
   temphash = {"get_meaning" => {}, "get_emoticon" => {}}
   original.each do |meaning, array| #"angel"=>["O:)", "☜(⌒▽⌒)☞"]
